@@ -1,0 +1,51 @@
+\documentclass[xcolor=dvipsnames]{beamer}
+%\usecolortheme[named=RoyalBlue]{structure}
+%\usecolortheme[named=CornflowerBlue]{structure}
+\usecolortheme[named=Red]{structure}
+%\usetheme{Antibes}
+\usetheme{Singapore}
+%\usetheme{Berlin}
+\usepackage[spanish, activeacute]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{times}
+\usepackage[T1]{fontenc}
+
+\usepackage{graphicx}
+
+\setbeamertemplate{blocks}[shadow=true] 
+\setbeamertemplate{navigation symbols}{} 
+
+\title[OSPF]{OSPF}CControl de Versionesontrol de Versiones
+\author{Jorge Medina - Santiago/Chile}
+
+\institute{IPLA 2009}
+%\mode<presentation>
+
+\date{Agosto. 28 , 2009}
+
+\AtBeginSection[]
+{
+	\begin{frame}<beamer>
+		\frametitle{Index}
+		\tableofcontents[currentsection]
+	\end{frame}
+}
+
+\begin{document}
+\fontsize{7}{9}
+	\begin{frame}
+		\titlepage
+	\end{frame}
+	
+\section{Introducci\'on}
+	\begin{frame}{Introducci'on}
+	\scriptsize
+	{
+	\begin{tabbing}	
+	Que es OSPF? \\ \\
+
+	\end{tabbing}
+	}
+	\end{frame}
+
+\end{document}
