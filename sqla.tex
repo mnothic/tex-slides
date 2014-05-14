@@ -8,8 +8,9 @@
 \usepackage{tikz}
 \usetikzlibrary{mindmap,trees}
 \usepackage{verbatim}
+\usepackage{listings}
 \author{Jorge A. Medina Oliva - Barcelona/Spain}
-\title{SQLAlchemy "the" python ORM}
+\title{Introduction to SQLAlchemy python ORM}
 %\setbeamercovered{transparent} 
 %\setbeamertemplate{navigation symbols}{} 
 \logo{} 
@@ -29,8 +30,8 @@
 
 \begin{frame}{What is an ORM?}
 
-An ORM is the data abstraction layer in a object oriented world 
-who maps tables in a relational database with object to the business logic
+An ORM is the software artefact who maps from the relational data base to class 
+or maps tables in a relational database directly to the object instance.
 
 \end{frame}
 
@@ -46,7 +47,7 @@ who maps tables in a relational database with object to the business logic
 \begin{frame}{Like What?}
 \begin{itemize}
 	\item What happen in python about django?
-the best known is django ORM but require django framework to work outside django
+The best known is django ORM but require django framework to work outside django
 but wait exist SQLAlchemy the best ORM in the python world ( is the only one )
 
 Let me introduce you to SQLAlchemy
@@ -58,20 +59,23 @@ SQLAlchemy evolve really good and is heavy used in Openstack, reddit, mozilla an
 \end{itemize}
 \end{frame}
 
-\begin{frame}
-\centering\begin{tikzpicture}
+\begin{frame}{SQLA pieces}
+\centering\begin{tikzpicture}[scale=0.5, transform shape]
   \path[mindmap,concept color=red,text=white]
     node[concept] {SQLA} [clockwise from=0]
     child[concept color=green!60!black] {node[concept] {engine}}  
     child[concept color=blue] {
     	node[concept] {ORM}[clockwise from=-30]
-      	child { node[concept] {databases} }
-      	child { node[concept] {WWW} }
+      	child { node[concept] {tables} }
+      	child { node[concept] {colums} }
     }
     child[concept color=red!80!green] { node[concept] {Model} }
     child[concept color=orange] { node[concept] {Session} };
 \end{tikzpicture}
 \end{frame}
 
+\begin{frame}
+
+\end{frame}
 %end presentation
 \end{document}
