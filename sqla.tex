@@ -6,6 +6,7 @@
 \usepackage{amssymb}
 \usepackage{graphicx}
 \usepackage{minted}
+\newminted{python}{bgcolor=gray!25,fontsize=\footnotesize,mathescape}
 \usepackage{tikz}
 \usetikzlibrary{mindmap,trees}
 \author{Jorge A. Medina Oliva - Barcelona/Spain}
@@ -58,24 +59,13 @@ SQLAlchemy evolve really good and is heavy used in Openstack, reddit, mozilla an
 \end{itemize}
 \end{frame}
 
-\begin{frame}{SQLA pieces}
-\centering\begin{tikzpicture}[scale=0.5, transform shape]
-  \path[mindmap,concept color=red,text=white]
-    node[concept] {SQLA} [clockwise from=0]
-    child[concept color=green!60!black] {node[concept] {engine}}  
-    child[concept color=blue] {
-    	node[concept] {ORM}[clockwise from=-30]
-      	child { node[concept] {tables} }
-      	child { node[concept] {colums} }
-    }
-    child[concept color=red!80!green] { node[concept] {Model} }
-    child[concept color=orange] { node[concept] {Session} };
-\end{tikzpicture}
+\begin{frame}{Arquitecture of SQLA}
+	\centering\includegraphics[scale=0.5]{sqla-arch.png}
 \end{frame}
 
-\begin{frame}
-    \frametitle{Python and Py-Ramesses}
-    \inputminted{python}{filename.py}
+\begin{frame}{Code ie.}
+
 \end{frame}
+
 %end presentation
 \end{document}
