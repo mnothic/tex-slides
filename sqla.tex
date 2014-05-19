@@ -9,12 +9,14 @@
 \newminted{python}{bgcolor=gray!25,fontsize=\footnotesize,mathescape}
 \usepackage{tikz}
 \usetikzlibrary{mindmap,trees}
-\author{Jorge A. Medina Oliva - Barcelona/Spain}
-\title{Introduction to SQLAlchemy python ORM}
-%\setbeamercovered{transparent} 
+\title{Introduction to python ORM SQLAlchemy}
+\author{
+	Jorge A. Medina Oliva - Barcelona
+}
+\setbeamercovered{transparent}
 %\setbeamertemplate{navigation symbols}{} 
-\logo{} 
-%\institute{} 
+\logo{\includegraphics[scale=0.2]{sqla_logo.png}} 
+\institute{http://pybcn.org} 
 %\date{} 
 \date{May. 22 , 2014}
 %\subject{} 
@@ -30,42 +32,167 @@
 
 \begin{frame}{What is an ORM?}
 
-An ORM is the software artefact who maps from the relational data base to class 
-or maps tables in a relational database directly to the object instance.
-
+An ORM is the software artefact who maps from the relational data base tables to object/class\\
+This means: maps tables in a relational database directly to the object instance and wraps all SQL/DDL functionality in his methods.
 \end{frame}
 
-\begin{frame}{Like what?}
+\begin{frame}{SQLAlchemy it's equivalent to...}
 \begin{itemize}
-	\item Java = Hiberante
-	\item PHP = Doctrine
-	\item ruby = DataMapper
-	\item .Net = NHibernate
+	\item Hiberante in java (main ideas become from here)
+	\item Doctrine in PHP
+	\item DataMapper in ruby (this is more close to Active Record pattern)
+	\item NHibernate in .Net C\#
+	\item django ORM in python Web framework
 \end{itemize}
 \end{frame}
 
-\begin{frame}{Like What?}
+\begin{frame}{diff with django orm}
+	There are two very important differences between SQLAlchemy and Django. SQLAlchemy is a deeply layered 	system, whereas Django's ORM is basically just one layer which is the ORM you see. 
+	\begin{enumerate}
+	\item In SQLAlchemy you have at the very bottom the engine:
+		\begin{itemize}
+			\item Connection pools and basic API differences between different databases
+			\item On top of that: the SQL abstraction language,
+			\item On top of SQL abstraction: the table definitions with the basic ORM 
+			\item And on top of ORM you have the declarative ORM which looks very close to the Django ORM. 
+		\end{itemize}
+	\item The other more striking difference however is that SQLAlchemy follows the “Unit of Work” pattern whereas Django's ORM follows something that is very close to the “Active Record” pattern.
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}{Advantages}
 \begin{itemize}
-	\item What happen in python about django?
-The best known is django ORM but require django framework to work outside django
-but wait exist SQLAlchemy the best ORM in the python world ( is the only one )
-
-Let me introduce you to SQLAlchemy
-
-The most important think is the documentation
-Good documentation very helpful at http://www.sqlalchemy.org
-I use it with python 2.4 to  3.3 without problems
-SQLAlchemy evolve really good and is heavy used in Openstack, reddit, mozilla and other organizations
+	\item Good documentation very helpful at http://www.sqlalchemy.org
+	\item Full compatible with python 2.4 to 3.3 without problems
+	\item Independent framework
+	\item Evolve really good
+	\item Strong design from the beginning
+	\item Layered components Connection pool, ORM, API, SQL, Aggregates, etc.
+	\item We can reuse part of the abstraction layer or all functionality
+	\item Implement advanced ideas from Hibernate.
+	\item SQLAlchemy does not override all your columns when you just changed one on update.
 \end{itemize}
 \end{frame}
 
-\begin{frame}{Arquitecture of SQLA}
+\begin{frame}{Disadvantages}
+\begin{itemize}
+	\item Documentation overwhelming
+	\item Confuse in the beginning because different ways you can configure SQLAlchemy and the ORM.
+	\item Independent framework and not integrate by default with another frameworks like django or pylons/pyramid
+	\item Only integrate in Flask-SQLAlchemy.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Arquitecture of SQLAlchemy}
 	\centering\includegraphics[scale=0.5]{sqla-arch.png}
 \end{frame}
 
-\begin{frame}{Code ie.}
-
+\begin{frame}[fragile]{Code objects for basic import}
+\begin{minted}{python}
+	""" SQLAlchemy engine factory """
+	from sqlalchemy import create_engine
+	""" ORM Datatypes """ 
+	from sqlalchemy import Column, ForeignKey, Integer, String
+	""" ORM Session factory """ 
+	from sqlalchemy.orm import sessionmaker
+	""" ORM relationship mapper """ 
+	from sqlalchemy.orm relationship
+	""" Declarative Base Object """ 
+	from sqlalchemy.ext.declarative import declarative_base
+	""" SQL expresions functions wrappers """ 
+	from sqlalchemy.sql import func
+\end{minted}
 \end{frame}
 
+\begin{frame}[fragile]{Object mapper and relational pattern}
+\textbf{One to Many}
+\begin{minted}{python}
+Base = declarative_base()
+
+class Parent(Base):
+    __tablename__ = 'parent'
+    id = Column(Integer, primary_key=True)
+    children = relationship("Child", backref="parent")
+
+class Child(Base):
+    __tablename__ = 'child'
+    id = Column(Integer, primary_key=True)
+    parent_id = Column(Integer, ForeignKey('parent.id'))
+        
+\end{minted}
+\end{frame}
+
+\begin{frame}[fragile]{Object mapper and relational pattern}
+\textbf{Many to One}
+\begin{minted}{python}
+class Parent(Base):
+    __tablename__ = 'parent'
+    id = Column(Integer, primary_key=True)
+    child_id = Column(Integer, ForeignKey('child.id'))
+    child = relationship("Child")
+
+class Child(Base):
+    __tablename__ = 'child'
+    id = Column(Integer, primary_key=True)
+\end{minted}
+\end{frame}
+
+\begin{frame}[fragile]{Object mapper and relational pattern}
+\textbf{One to One}
+\begin{minted}{python}
+class Parent(Base):
+    __tablename__ = 'parent'
+    id = Column(Integer, primary_key=True)
+    child = relationship("Child", uselist=False, backref="parent")
+
+class Child(Base):
+    __tablename__ = 'child'
+    id = Column(Integer, primary_key=True)
+    parent_id = Column(Integer, ForeignKey('parent.id'))%
+\end{minted}
+\end{frame}
+
+\begin{frame}[fragile]{Object mapper and relational pattern}
+\textbf{Many to Many}
+\begin{minted}{python}
+association_table = Table('association', Base.metadata,
+    Column('left_id', Integer, ForeignKey('left.id')),
+    Column('right_id', Integer, ForeignKey('right.id'))
+)
+
+class Parent(Base):
+    __tablename__ = 'left'
+    id = Column(Integer, primary_key=True)SQLAlchemy]
+    children = relationship("Child",
+                    secondary=association_table,
+                    backref="parents")
+
+class Child(Base):
+    __tablename__ = 'right'
+    id = Column(Integer, primary_key=True)
+\end{minted}
+\end{frame}
+
+\begin{frame}{Bibliography}
+\begin{enumerate}
+\item SQLAlchemy - Official documentation, March 28, 2014 http://docs.sqlalchemy.org
+\item Armin Ronacher - SQLAlchemy and You, July 19, 2011 http://lucumr.pocoo.org/2011/7/19/sqlachemy-and-you/
+\item Alexander Solovyov, April 23, 2011 http://solovyov.net/en/2011/basic-sqlalchemy/
+\item Alexander Solovyov, May 14, 2012 https://github.com/piranha/slides/blob/gh-pages/sqla-talk/sqla.md
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Thanks \& Contact info}
+\centering\textbf{Questions?}
+\\
+\begin{small}
+More information or social links about me:\\
+http://bsdchile.cl
+\end{small}
+\end{frame}
+
+\begin{frame}{}
+
+\end{frame}
 %end presentation
 \end{document}
