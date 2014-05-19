@@ -46,7 +46,7 @@ This means: maps tables in a relational database directly to the object instance
 \end{itemize}
 \end{frame}
 
-\begin{frame}{diff with django orm}
+\begin{frame}{differences with django orm}
 	There are two very important differences between SQLAlchemy and Django. SQLAlchemy is a deeply layered 	system, whereas Django's ORM is basically just one layer which is the ORM you see. 
 	\begin{enumerate}
 	\item In SQLAlchemy you have at the very bottom the engine:
@@ -63,7 +63,6 @@ This means: maps tables in a relational database directly to the object instance
 \begin{frame}{Advantages}
 \begin{itemize}
 	\item Good documentation very helpful at http://www.sqlalchemy.org
-	\item Full compatible with python 2.4 to 3.3 without problems
 	\item Independent framework
 	\item Evolve really good
 	\item Strong design from the beginning
@@ -81,6 +80,26 @@ This means: maps tables in a relational database directly to the object instance
 	\item Independent framework and not integrate by default with another frameworks like django or pylons/pyramid
 	\item Only integrate in Flask-SQLAlchemy.
 \end{itemize}
+\end{frame}
+
+\begin{frame}{Supported Platforms}
+	\textbf{SQLAlchemy has been tested against the following platforms:}
+	\begin{itemize}
+		\item cPython since version 2.6, through the 2.xx series
+		\item cPython version 3, throughout all 3.xx series
+		\item Pypy 2.1 or greater
+	\end{itemize}
+\end{frame}
+\begin{frame}{Installation}
+	\begin{block}{With pip}
+		pip install SQLAlchemy
+	\end{block} 
+	\begin{block}{Or with easy\_install}
+		easy\_install SQLAlchemy
+	\end{block}
+	\begin{quote}
+	All other methods are supported too...
+	\end{quote}
 \end{frame}
 
 \begin{frame}{Arquitecture of SQLAlchemy}
@@ -143,12 +162,13 @@ class Child(Base):
 class Parent(Base):
     __tablename__ = 'parent'
     id = Column(Integer, primary_key=True)
-    child = relationship("Child", uselist=False, backref="parent")
+    child = relationship("Child", uselist=False, 
+    						backref="parent")
 
 class Child(Base):
     __tablename__ = 'child'
     id = Column(Integer, primary_key=True)
-    parent_id = Column(Integer, ForeignKey('parent.id'))%
+    parent_id = Column(Integer, ForeignKey('parent.id'))
 \end{minted}
 \end{frame}
 

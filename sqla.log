@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Arch Linux) (format=pdflatex 2014.5.12)  19 MAY 2014 16:58
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Arch Linux) (format=pdflatex 2014.5.11)  19 MAY 2014 22:09
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1283,7 +1283,7 @@ Overfull \hbox (28.11566pt too wide) has occurred while \output is active
 ]
 File: sqla_logo.png Graphic file (type png)
  <use sqla_logo.png>
-Package pdftex.def Info: sqla_logo.png used on input line 75.
+Package pdftex.def Info: sqla_logo.png used on input line 74.
 (pdftex.def)             Requested size: 60.22392pt x 12.64702pt.
 
 Overfull \hbox (28.11566pt too wide) has occurred while \output is active
@@ -1295,7 +1295,7 @@ Overfull \hbox (28.11566pt too wide) has occurred while \output is active
 ]
 File: sqla_logo.png Graphic file (type png)
  <use sqla_logo.png>
-Package pdftex.def Info: sqla_logo.png used on input line 84.
+Package pdftex.def Info: sqla_logo.png used on input line 83.
 (pdftex.def)             Requested size: 60.22392pt x 12.64702pt.
 
 Overfull \hbox (28.11566pt too wide) has occurred while \output is active
@@ -1304,15 +1304,10 @@ Overfull \hbox (28.11566pt too wide) has occurred while \output is active
 
 [6
 
-] <sqla-arch.png, id=189, 455.7025pt x 433.62pt>
-File: sqla-arch.png Graphic file (type png)
- <use sqla-arch.png>
-Package pdftex.def Info: sqla-arch.png used on input line 88.
-(pdftex.def)             Requested size: 227.85068pt x 216.80946pt.
+]
 File: sqla_logo.png Graphic file (type png)
-
-<use sqla_logo.png>
-Package pdftex.def Info: sqla_logo.png used on input line 88.
+ <use sqla_logo.png>
+Package pdftex.def Info: sqla_logo.png used on input line 92.
 (pdftex.def)             Requested size: 60.22392pt x 12.64702pt.
 
 Overfull \hbox (28.11566pt too wide) has occurred while \output is active
@@ -1320,6 +1315,35 @@ Overfull \hbox (28.11566pt too wide) has occurred while \output is active
  []
 
 [7
+
+]
+File: sqla_logo.png Graphic file (type png)
+ <use sqla_logo.png>
+Package pdftex.def Info: sqla_logo.png used on input line 103.
+(pdftex.def)             Requested size: 60.22392pt x 12.64702pt.
+
+Overfull \hbox (28.11566pt too wide) has occurred while \output is active
+ [][]  \OT1/cmss/m/n/6 ([])  
+ []
+
+[8
+
+] <sqla-arch.png, id=247, 455.7025pt x 433.62pt>
+File: sqla-arch.png Graphic file (type png)
+ <use sqla-arch.png>
+Package pdftex.def Info: sqla-arch.png used on input line 107.
+(pdftex.def)             Requested size: 227.85068pt x 216.80946pt.
+File: sqla_logo.png Graphic file (type png)
+
+<use sqla_logo.png>
+Package pdftex.def Info: sqla_logo.png used on input line 107.
+(pdftex.def)             Requested size: 60.22392pt x 12.64702pt.
+
+Overfull \hbox (28.11566pt too wide) has occurred while \output is active
+ [][]  \OT1/cmss/m/n/6 ([])  
+ []
+
+[9
 
  <./sqla-arch.png>]
 \openout4 = `sqla.vrb'.
@@ -1341,59 +1365,7 @@ runsystem(rm sqla.pyg)...executed.
 )
 File: sqla_logo.png Graphic file (type png)
  <use sqla_logo.png>
-Package pdftex.def Info: sqla_logo.png used on input line 105.
-(pdftex.def)             Requested size: 60.22392pt x 12.64702pt.
-
-Overfull \hbox (28.11566pt too wide) has occurred while \output is active
- [][]  \OT1/cmss/m/n/6 ([])  
- []
-
-[8
-
-]
-\openout4 = `sqla.vrb'.
-
- (./sqla.vrb
-\openout5 = `sqla.pyg'.
-
-runsystem(pygmentize -l python -f latex -F tokenmerge             -P "verboptio
-ns= " -o sqla.out.pyg sqla.pyg)...executed.
-
- (./sqla.out.pyg)
-runsystem(rm sqla.out.pyg)...executed.
-
-runsystem(rm sqla.pyg)...executed.
-
-)
-File: sqla_logo.png Graphic file (type png)
- <use sqla_logo.png>
-Package pdftex.def Info: sqla_logo.png used on input line 123.
-(pdftex.def)             Requested size: 60.22392pt x 12.64702pt.
-
-Overfull \hbox (28.11566pt too wide) has occurred while \output is active
- [][]  \OT1/cmss/m/n/6 ([])  
- []
-
-[9
-
-]
-\openout4 = `sqla.vrb'.
-
- (./sqla.vrb
-\openout5 = `sqla.pyg'.
-
-runsystem(pygmentize -l python -f latex -F tokenmerge             -P "verboptio
-ns= " -o sqla.out.pyg sqla.pyg)...executed.
-
- (./sqla.out.pyg)
-runsystem(rm sqla.out.pyg)...executed.
-
-runsystem(rm sqla.pyg)...executed.
-
-)
-File: sqla_logo.png Graphic file (type png)
- <use sqla_logo.png>
-Package pdftex.def Info: sqla_logo.png used on input line 138.
+Package pdftex.def Info: sqla_logo.png used on input line 124.
 (pdftex.def)             Requested size: 60.22392pt x 12.64702pt.
 
 Overfull \hbox (28.11566pt too wide) has occurred while \output is active
@@ -1419,7 +1391,7 @@ runsystem(rm sqla.pyg)...executed.
 )
 File: sqla_logo.png Graphic file (type png)
  <use sqla_logo.png>
-Package pdftex.def Info: sqla_logo.png used on input line 153.
+Package pdftex.def Info: sqla_logo.png used on input line 142.
 (pdftex.def)             Requested size: 60.22392pt x 12.64702pt.
 
 Overfull \hbox (28.11566pt too wide) has occurred while \output is active
@@ -1443,12 +1415,9 @@ runsystem(rm sqla.out.pyg)...executed.
 runsystem(rm sqla.pyg)...executed.
 
 )
-Overfull \vbox (2.02945pt too high) detected at line 174
- []
-
 File: sqla_logo.png Graphic file (type png)
-<use sqla_logo.png>
-Package pdftex.def Info: sqla_logo.png used on input line 174.
+ <use sqla_logo.png>
+Package pdftex.def Info: sqla_logo.png used on input line 157.
 (pdftex.def)             Requested size: 60.22392pt x 12.64702pt.
 
 Overfull \hbox (28.11566pt too wide) has occurred while \output is active
@@ -1458,9 +1427,23 @@ Overfull \hbox (28.11566pt too wide) has occurred while \output is active
 [12
 
 ]
+\openout4 = `sqla.vrb'.
+
+ (./sqla.vrb
+\openout5 = `sqla.pyg'.
+
+runsystem(pygmentize -l python -f latex -F tokenmerge             -P "verboptio
+ns= " -o sqla.out.pyg sqla.pyg)...executed.
+
+ (./sqla.out.pyg)
+runsystem(rm sqla.out.pyg)...executed.
+
+runsystem(rm sqla.pyg)...executed.
+
+)
 File: sqla_logo.png Graphic file (type png)
  <use sqla_logo.png>
-Package pdftex.def Info: sqla_logo.png used on input line 183.
+Package pdftex.def Info: sqla_logo.png used on input line 173.
 (pdftex.def)             Requested size: 60.22392pt x 12.64702pt.
 
 Overfull \hbox (28.11566pt too wide) has occurred while \output is active
@@ -1470,9 +1453,26 @@ Overfull \hbox (28.11566pt too wide) has occurred while \output is active
 [13
 
 ]
+\openout4 = `sqla.vrb'.
+
+ (./sqla.vrb
+\openout5 = `sqla.pyg'.
+
+runsystem(pygmentize -l python -f latex -F tokenmerge             -P "verboptio
+ns= " -o sqla.out.pyg sqla.pyg)...executed.
+
+ (./sqla.out.pyg)
+runsystem(rm sqla.out.pyg)...executed.
+
+runsystem(rm sqla.pyg)...executed.
+
+)
+Overfull \vbox (2.02945pt too high) detected at line 194
+ []
+
 File: sqla_logo.png Graphic file (type png)
- <use sqla_logo.png>
-Package pdftex.def Info: sqla_logo.png used on input line 192.
+<use sqla_logo.png>
+Package pdftex.def Info: sqla_logo.png used on input line 194.
 (pdftex.def)             Requested size: 60.22392pt x 12.64702pt.
 
 Overfull \hbox (28.11566pt too wide) has occurred while \output is active
@@ -1484,7 +1484,7 @@ Overfull \hbox (28.11566pt too wide) has occurred while \output is active
 ]
 File: sqla_logo.png Graphic file (type png)
  <use sqla_logo.png>
-Package pdftex.def Info: sqla_logo.png used on input line 196.
+Package pdftex.def Info: sqla_logo.png used on input line 203.
 (pdftex.def)             Requested size: 60.22392pt x 12.64702pt.
 
 Overfull \hbox (28.11566pt too wide) has occurred while \output is active
@@ -1492,6 +1492,30 @@ Overfull \hbox (28.11566pt too wide) has occurred while \output is active
  []
 
 [15
+
+]
+File: sqla_logo.png Graphic file (type png)
+ <use sqla_logo.png>
+Package pdftex.def Info: sqla_logo.png used on input line 212.
+(pdftex.def)             Requested size: 60.22392pt x 12.64702pt.
+
+Overfull \hbox (28.11566pt too wide) has occurred while \output is active
+ [][]  \OT1/cmss/m/n/6 ([])  
+ []
+
+[16
+
+]
+File: sqla_logo.png Graphic file (type png)
+ <use sqla_logo.png>
+Package pdftex.def Info: sqla_logo.png used on input line 216.
+(pdftex.def)             Requested size: 60.22392pt x 12.64702pt.
+
+Overfull \hbox (28.11566pt too wide) has occurred while \output is active
+ [][]  \OT1/cmss/m/n/6 ([])  
+ []
+
+[17
 
 ]
 \tf@nav=\write8
@@ -1503,11 +1527,11 @@ Overfull \hbox (28.11566pt too wide) has occurred while \output is active
 \tf@snm=\write10
 \openout10 = `sqla.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 198.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 198.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 218.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 218.
  (./sqla.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 198.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 198.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 218.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 218.
 Package rerunfilecheck Info: File `sqla.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
@@ -1515,25 +1539,26 @@ Package rerunfilecheck Info: File `sqla.out' has not changed.
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 198.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 218.
  ) 
 Here is how much of TeX's memory you used:
- 20969 strings out of 493308
- 412965 string characters out of 6143616
- 487260 words of memory out of 5000000
- 23892 multiletter control sequences out of 15000+600000
- 6387 words of font info for 24 fonts, out of 8000000 for 9000
+ 21023 strings out of 493308
+ 414155 string characters out of 6143616
+ 488260 words of memory out of 5000000
+ 23941 multiletter control sequences out of 15000+600000
+ 6743 words of font info for 25 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  48i,17n,65p,403b,571s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmitt10.pfb></usr/share
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texmf-dist/fo
 nts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texmf-dist/fonts/type1/publ
 ic/amsfonts/cm/cmss8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmssbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on sqla.pdf (15 pages, 136155 bytes).
+cmssbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb>
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on sqla.pdf (17 pages, 152167 bytes).
 PDF statistics:
- 461 PDF objects out of 1000 (max. 8388607)
- 417 compressed objects within 5 object streams
- 31 named destinations out of 1000 (max. 500000)
- 83 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 519 PDF objects out of 1000 (max. 8388607)
+ 471 compressed objects within 5 object streams
+ 35 named destinations out of 1000 (max. 500000)
+ 89 words of extra memory for PDF output out of 10000 (max. 10000000)
 
