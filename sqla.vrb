@@ -8,7 +8,7 @@ association_table = Table('association', Base.metadata,
 
 class Parent(Base):
     __tablename__ = 'left'
-    id = Column(Integer, primary_key=True)SQLAlchemy]
+    id = Column(Integer, primary_key=True)
     children = relationship("Child",
                     secondary=association_table,
                     backref="parents")
