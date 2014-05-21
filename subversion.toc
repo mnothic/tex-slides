@@ -1,8 +1,0 @@
-\beamer@endinputifotherversion {3.01pt}
-\select@language {spanish}
-\beamer@sectionintoc {1}{Introducci\'on}{2}{0}{1}
-\beamer@sectionintoc {2}{Estructura del repositorio}{7}{0}{2}
-\beamer@sectionintoc {3}{C\'omo se trabaja con SVN?}{11}{0}{3}
-\beamer@sectionintoc {4}{Muestra del GUI}{18}{0}{4}
-\beamer@sectionintoc {5}{Concluci\'on}{23}{0}{5}
-\beamer@sectionintoc {6}{Fin}{25}{0}{6}
