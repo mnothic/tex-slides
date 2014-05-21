@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Arch Linux) (format=pdflatex 2014.5.12)  20 MAY 2014 14:38
-=======
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Arch Linux) (format=pdflatex 2014.5.11)  20 MAY 2014 21:15
->>>>>>> 187c18e25ab4dfb88cbf415c3692b19386e40b6f
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Arch Linux) (format=pdflatex 2014.5.12)  21 MAY 2014 09:11
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1677,10 +1673,10 @@ LaTeX Font Warning: Size substitutions with differences
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 243.
  ) 
 Here is how much of TeX's memory you used:
- 21038 strings out of 493308
- 414343 string characters out of 6143616
+ 21040 strings out of 493308
+ 414359 string characters out of 6143616
  489136 words of memory out of 5000000
- 23943 multiletter control sequences out of 15000+600000
+ 23945 multiletter control sequences out of 15000+600000
  6743 words of font info for 25 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  48i,17n,65p,403b,571s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1690,11 +1686,7 @@ nts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texmf-dist/fonts/type1/publ
 ic/amsfonts/cm/cmss8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/
 cmssbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb>
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-<<<<<<< HEAD
-Output written on sqla.pdf (17 pages, 152180 bytes).
-=======
-Output written on sqla.pdf (19 pages, 165611 bytes).
->>>>>>> 187c18e25ab4dfb88cbf415c3692b19386e40b6f
+Output written on sqla.pdf (19 pages, 165637 bytes).
 PDF statistics:
  578 PDF objects out of 1000 (max. 8388607)
  525 compressed objects within 6 object streams
