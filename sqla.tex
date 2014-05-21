@@ -6,7 +6,6 @@
 \usepackage{amssymb}
 \usepackage{graphicx}
 \usepackage{minted}
-\newminted{python}{bgcolor=gray!25,fontsize=\footnotesize,mathescape}
 \usepackage{tikz}
 \usetikzlibrary{mindmap,trees}
 \title{Introduction to python ORM SQLAlchemy}
@@ -15,7 +14,7 @@
 }
 \setbeamercovered{transparent}
 %\setbeamertemplate{navigation symbols}{} 
-\logo{\includegraphics[scale=0.2]{sqla_logo.png}} 
+\logo{\includegraphics[scale=0.060]{python-logo.png}\includegraphics[scale=0.2]{sqla_logo.png}} 
 \institute{http://pybcn.org} 
 %\date{} 
 \date{May. 22 , 2014}
@@ -70,6 +69,7 @@ This means: maps tables in a relational database directly to the object instance
 	\item We can reuse part of the abstraction layer or all functionality
 	\item Implement advanced ideas from Hibernate.
 	\item SQLAlchemy does not override all your columns when you just changed one on update.
+	\item differed column load
 \end{itemize}
 \end{frame}
 
@@ -123,6 +123,31 @@ This means: maps tables in a relational database directly to the object instance
 \end{minted}
 \end{frame}
 
+\begin{frame}[fragile]{Basic Use case}
+\begin{minted}{python}
+engine = create_engine('sqlite:///demo.db', echo=False)
+session = sessionmaker(bind=engine)()
+Base.metadata.create_all(engine, checkfirst=True)
+p = Parent('prueba')
+session.add(p)
+session.commit()
+\end{minted}
+\end{frame}
+
+\begin{frame}[fragile]{Basic Use case}
+\begin{minted}{python}
+q = session.query(Parent).all()
+for x in q:
+    c = Child("child", x.id)
+    session.add(c)
+session.commit()
+session.refresh(p)
+for x in q:
+    print("{}+\n      |".format(x.name))
+    for i in x.children:
+        print("      +-->{}".format(i.name))
+\end{minted}
+\end{frame}
 \begin{frame}[fragile]{Object mapper and relational pattern}
 \textbf{One to Many}
 \begin{minted}{python}
@@ -182,7 +207,7 @@ association_table = Table('association', Base.metadata,
 
 class Parent(Base):
     __tablename__ = 'left'
-    id = Column(Integer, primary_key=True)SQLAlchemy]
+    id = Column(Integer, primary_key=True)
     children = relationship("Child",
                     secondary=association_table,
                     backref="parents")
