@@ -31,8 +31,8 @@
 
 \begin{frame}{What is an ORM?}
 
-An ORM is the software artefact who maps from the relational data base tables to object/class\\
-This means: maps tables in a relational database directly to the object instance and wraps all SQL/DDL functionality in his methods.
+An ORM is the software artefact who maps from relational data base tables to object/class\\
+This means: maps the tables and  columns in a relational database directly to the object instance and wraps all SQL/DDL functionality in his methods.
 \end{frame}
 
 \begin{frame}{SQLAlchemy it's equivalent to...}
@@ -59,27 +59,26 @@ This means: maps tables in a relational database directly to the object instance
 	\end{enumerate}
 \end{frame}
 
-\begin{frame}{Advantages}
+\begin{frame}{SQLAlchemy Advantages }
 \begin{itemize}
-	\item Good documentation very helpful at http://www.sqlalchemy.org
+	\item Great documentation at http://www.sqlalchemy.org
 	\item Independent framework
-	\item Evolve really good
-	\item Strong design from the beginning
-	\item Layered components Connection pool, ORM, API, SQL, Aggregates, etc.
-	\item We can reuse part of the abstraction layer or all functionality
-	\item Implement advanced ideas from Hibernate.
-	\item SQLAlchemy does not override all your columns when you just changed one on update.
+	\item active and stable development    
+	\item Strong design since beginning
+	\item Layered components like Connection pool, ORM, API, SQL, Aggregates, etc.
+	\item We can use any independent component  
+	\item Implement advanced Hibernate's ideas.
+	\item SQLAlchemy doesn't override all your columns when you just changed one on update.
 	\item differed column load
 	\item Connection pooling
 \end{itemize}
 \end{frame}
 
-\begin{frame}{Disadvantages}
+\begin{frame}{SQLAlchemy Disadvantages}
 \begin{itemize}
 	\item Documentation overwhelming
-	\item Confuse in the beginning because different ways you can configure SQLAlchemy and the ORM.
-	\item Independent framework and not integrate by default with another frameworks like django or pylons/pyramid
-	\item Only integrate in Flask-SQLAlchemy.
+	\item Confuses at the beginning because exist different programming options.
+	\item only integrates in Flask-SQLAlchemy web framework
 \end{itemize}
 \end{frame}
 
@@ -107,7 +106,7 @@ This means: maps tables in a relational database directly to the object instance
 	\centering\includegraphics[scale=0.5]{sqla-arch.png}
 \end{frame}
 
-\begin{frame}[fragile]{Code objects for basic import}
+\begin{frame}[fragile]{The basics to starts}
 \begin{minted}{python}
 	""" SQLAlchemy engine factory """
 	from sqlalchemy import create_engine
@@ -237,8 +236,5 @@ http://bsdchile.cl
 \end{small}
 \end{frame}
 
-\begin{frame}{}
-
-\end{frame}
 %end presentation
 \end{document}
